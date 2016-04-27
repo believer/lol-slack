@@ -1,0 +1,5 @@
+node_modules
+deploy.sh
+npm-debug.log
+.env
+config.json
