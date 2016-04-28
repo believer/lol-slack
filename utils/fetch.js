@@ -1,8 +1,14 @@
-var fetch = require('node-fetch')
+const fetch = require('node-fetch')
 
 function getData (url) {
   return fetch(url)
-    .then(function(response) { return response.json() })
+    .then(response => {
+      if (response.status === 503) {
+        throw new Error(response.statusText)
+      }
+
+      return response.json()
+    })
 }
 
 module.exports = getData
