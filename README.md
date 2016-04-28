@@ -15,7 +15,7 @@ $ npm install
 $ npm start
 ```
 
-This starts one route at http://localhost:3000/lol. Slash commands send a `POST` with some data. So to test it post a JSON object on the form of for example:
+This starts one `POST` route at [http://localhost:3000/lol](http://localhost:3000/lol). So to test it post a JSON object on the form of for example:
 
 ```
 {
