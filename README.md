@@ -29,8 +29,8 @@ Slack have provided a great way for testing the message formatting [right here](
 ### Slash commands
 The service responds to slash commands, i.e. `/lol` as a message. The available commands are listed below.
 
-* <region> = eune, euw, na and so on `default: eune`
-* <platform> = eun1, euw1, na1 and so on `default: eun1`
+* region = eune, euw, na and so on `default: eune`
+* platform = eun1, euw1, na1 and so on `default: eun1`
 
 #### `/lol freeToPlay <region>`
 #### [TRY IT!](https://api.slack.com/docs/formatting/builder?msg=%7B%22mrkdwn%22:true,%22text%22:%22*League%20of%20Legends%20-%20Free%20to%20play%20champions*%22,%22attachments%22:%5B%7B%22fields%22:%5B%7B%22title%22:%22Blitzcrank%22,%22value%22:%22the%20Great%20Steam%20Golem%22,%22short%22:true%7D,%7B%22title%22:%22Gragas%22,%22value%22:%22the%20Rabble%20Rouser%22,%22short%22:true%7D,%7B%22title%22:%22Kalista%22,%22value%22:%22the%20Spear%20of%20Vengeance%22,%22short%22:true%7D,%7B%22title%22:%22Kassadin%22,%22value%22:%22the%20Void%20Walker%22,%22short%22:true%7D,%7B%22title%22:%22Lulu%22,%22value%22:%22the%20Fae%20Sorceress%22,%22short%22:true%7D,%7B%22title%22:%22Orianna%22,%22value%22:%22the%20Lady%20of%20Clockwork%22,%22short%22:true%7D,%7B%22title%22:%22Sion%22,%22value%22:%22The%20Undead%20Juggernaut%22,%22short%22:true%7D,%7B%22title%22:%22Sivir%22,%22value%22:%22the%20Battle%20Mistress%22,%22short%22:true%7D,%7B%22title%22:%22Skarner%22,%22value%22:%22the%20Crystal%20Vanguard%22,%22short%22:true%7D,%7B%22title%22:%22Tahm%20Kench%22,%22value%22:%22the%20River%20King%22,%22short%22:true%7D%5D%7D%5D%7D)
