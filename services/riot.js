@@ -3,6 +3,7 @@ const GLOBAL_BASE = process.env.LOL_GLOBAL
 const KEY = process.env.RIOT_API_KEY
 const fetch = require('../utils/fetch')
 const _ = require('lodash')
+const moment = require('moment')
 
 function prepUrl (url, region = 'eune', base = BASE, options) {
   base = base.replace('{region}', region)
@@ -48,7 +49,19 @@ function summonerStatsSummaryById (summoner, region) {
 }
 
 function topThreeChampions (summoner, region, platform) {
-  const url = prepUrl(`/championmastery/location/${platform}/player/${summoner.id}/topchampions`, null, 'https://eune.api.pvp.net/')
+  const url = prepUrl(`/championmastery/location/${platform}/player/${summoner.id}/topchampions`, null, 'https://eune.api.pvp.net')
+
+  return fetch(url)
+}
+
+function championMasteryAll (summoner, region, platform) {
+  const url = prepUrl(`/championmastery/location/${platform}/player/${summoner.id}/champions`, null, 'https://eune.api.pvp.net')
+
+  return fetch(url)
+}
+
+function masteryScore (summoner, region, platform) {
+  const url = prepUrl(`/championmastery/location/${platform}/player/${summoner.id}/score`, null, 'https://eune.api.pvp.net')
 
   return fetch(url)
 }
@@ -66,6 +79,26 @@ function teamBySummonerId (summoner, region) {
     .then(data => Object.assign(summoner, { teams: data[summoner.id] }))
 }
 
+function match (match, region) {
+  const url = prepUrl(`/v2.2/match/${match.matchId}`, region)
+
+  return fetch(url)
+    .then(data => Object.assign(match, { match: data }))
+}
+
+function rankedMatches (summoner, region) {
+  const time = moment()
+    .subtract(1, 'day')
+    .hour(0)
+    .minute(0)
+    .second(0)
+    .format('x')
+
+  const url = prepUrl(`/v2.2/matchlist/by-summoner/${summoner.id}`, region, BASE, `&rankedQueues=TEAM_BUILDER_DRAFT_RANKED_5x5&seasons=SEASON2016&beginTime=${time}`)
+
+  return fetch(url)
+}
+
 function status (region) {
   const url = prepUrl(`/shards/${region.toLowerCase()}`, null, 'http://status.leagueoflegends.com')
 
@@ -73,9 +106,13 @@ function status (region) {
 }
 
 module.exports = {
-  champions: champions,
   championById: championById,
+  championMasteryAll: championMasteryAll,
+  champions: champions,
   gameBySummoner: gameBySummoner,
+  match: match,
+  masteryScore: masteryScore,
+  rankedMatches: rankedMatches,
   status: status,
   summonerByIds: summonerByIds,
   summonerByName: summonerByName,

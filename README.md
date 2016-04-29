@@ -53,6 +53,20 @@ Displays statistics from a summoner's latest game.
 
 ![latest command](/assets/latest.png)
 
+#### `/lol masteryScore <summonerName> <region>`
+#### [TRY IT!](https://api.slack.com/docs/formatting/builder?msg=%7B%22mrkdwn%22:true,%22text%22:%22*League%20of%20Legends%20-%20Mastery%20score%20for%20believer%20is%20_184_%20(EUNE)*%22%7D)
+
+Displays total mastery score of a summoner.
+
+![masteryScore command](/assets/masteryScore.png)
+
+#### `/lol rankedMatches <summonerName> <region>`
+#### [TRY IT!](https://api.slack.com/docs/formatting/builder?msg=%7B%22mrkdwn%22:true,%22text%22:%22*League%20of%20Legends%20-%20Ranked%20matches%20last%2024%20hours%20for%20believer%20(EUNE)*%22,%22attachments%22:%5B%7B%22mrkdwn_in%22:%5B%22text%22%5D,%22thumb_url%22:%22http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/Sivir.png%22,%22title%22:%22Match%20played%20on%202016-04-28%2021:01%22,%22fields%22:%5B%7B%22title%22:%22Lane%22,%22value%22:%22BOTTOM%22,%22short%22:true%7D,%7B%22title%22:%22Role%22,%22value%22:%22DUO_CARRY%22,%22short%22:true%7D,%7B%22title%22:%22Champion%22,%22value%22:%22Sivir%22,%22short%22:true%7D,%7B%22title%22:%22Duration%22,%22value%22:%2222:51%22,%22short%22:true%7D%5D%7D,%7B%22mrkdwn_in%22:%5B%22text%22%5D,%22thumb_url%22:%22http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/Ekko.png%22,%22title%22:%22Match%20played%20on%202016-04-28%2020:20%22,%22fields%22:%5B%7B%22title%22:%22Lane%22,%22value%22:%22TOP%22,%22short%22:true%7D,%7B%22title%22:%22Role%22,%22value%22:%22SOLO%22,%22short%22:true%7D,%7B%22title%22:%22Champion%22,%22value%22:%22Ekko%22,%22short%22:true%7D,%7B%22title%22:%22Duration%22,%22value%22:%2230:30%22,%22short%22:true%7D%5D%7D%5D%7D)
+
+Displays ranked matches from the last 24 hours.
+
+![rankedMatches command](/assets/rankedMatches.png)
+
 #### `/lol status <region>`
 #### [TRY IT!](https://api.slack.com/docs/formatting/builder?msg=%7B%22mrkdwn%22:true,%22text%22:%22*League%20of%20Legends%20-%20Status%20for%20EU%20Nordic%20&%20East*%22,%22attachments%22:%5B%7B%22fields%22:%5B%7B%22title%22:%22Game%22,%22value%22:%22online%22,%22short%22:true%7D,%7B%22title%22:%22Store%22,%22value%22:%22online%22,%22short%22:true%7D,%7B%22title%22:%22Website%22,%22value%22:%22online%22,%22short%22:true%7D,%7B%22title%22:%22Client%22,%22value%22:%22online%22,%22short%22:true%7D%5D%7D%5D%7D)
 
