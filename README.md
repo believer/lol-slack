@@ -24,7 +24,7 @@ This starts one `POST` route at [http://localhost:3000/lol](http://localhost:300
 ```
 
 ## Testing
-Slack have provided a great way for testing the message formatting [right here](https://api.slack.com/docs/formatting/builder). Each command also have a direct *TRY IT* link with a typical response and the response has a URL directly to the Slack formatting. This is how the message will look in the chat, instead of just looking at the JSON that the API reponds with ;)
+Slack have provided a great way for testing the message formatting [right here](https://api.slack.com/docs/formatting/builder). Each command also have a direct *TRY IT* link with a typical message and the response has a URL directly to the Slack formatting. This is how the message will look in the chat, instead of just looking at the JSON that the API reponds with ;)
 
 ### Slash commands
 The service responds to slash commands, i.e. `/lol` as a message. The available commands are listed below.
