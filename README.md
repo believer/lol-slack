@@ -54,7 +54,7 @@ Displays statistics from a summoner's latest game.
 ![latest command](/assets/latest.png)
 
 #### `/lol status <region>`
-#### [TRY IT!](%7B%22mrkdwn%22:true,%22text%22:%22*League%20of%20Legends%20-%20Status%20for%20EU%20Nordic%20&%20East*%22,%22attachments%22:%5B%7B%22fields%22:%5B%7B%22title%22:%22Game%22,%22value%22:%22online%22,%22short%22:true%7D,%7B%22title%22:%22Store%22,%22value%22:%22online%22,%22short%22:true%7D,%7B%22title%22:%22Website%22,%22value%22:%22online%22,%22short%22:true%7D,%7B%22title%22:%22Client%22,%22value%22:%22online%22,%22short%22:true%7D%5D%7D%5D%7D)
+#### [TRY IT!](https://api.slack.com/docs/formatting/builder?msg=%7B%22mrkdwn%22:true,%22text%22:%22*League%20of%20Legends%20-%20Status%20for%20EU%20Nordic%20&%20East*%22,%22attachments%22:%5B%7B%22fields%22:%5B%7B%22title%22:%22Game%22,%22value%22:%22online%22,%22short%22:true%7D,%7B%22title%22:%22Store%22,%22value%22:%22online%22,%22short%22:true%7D,%7B%22title%22:%22Website%22,%22value%22:%22online%22,%22short%22:true%7D,%7B%22title%22:%22Client%22,%22value%22:%22online%22,%22short%22:true%7D%5D%7D%5D%7D)
 
 Displays the current status of the servers in a region.
 
