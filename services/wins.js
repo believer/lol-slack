@@ -1,9 +1,9 @@
 const riot = require('./riot')
 
-function wins (summonerName) {
-  return riot.summonerByName(summonerName)
+function wins (summonerName, region) {
+  return riot.summonerByName(summonerName, region)
     .then(summoner => summoner[summonerName])
-    .then(riot.summonerStatsSummaryById)
+    .then(summoner => riot.summonerStatsSummaryById(summoner, region))
     .then(summoner => {
       const wins = summoner.stats
         .reduce((a, b) => a + b.wins, 0)
