@@ -8,18 +8,18 @@ At work we use [Slack](https://slack.com/) for day-to-day business and shenaniga
 * [Docker](docker.io) - Running the service
 
 ### Installation
-```
-$ git clone https://github.com/believer/lol-slack.git
-$ cd lol-slack
-$ npm install
-$ npm start
-```
-
 Three environment variables need to be setup before starting.
 ```
 LOL_GLOBAL=https://global.api.pvp.net/api/lol/static-data/{region}
 LOL_BASE=https://eune.api.pvp.net/api/lol/{region}
 RIOT_API_KEY=[YOUR-API-KEY]
+```
+
+```
+$ git clone https://github.com/believer/lol-slack.git
+$ cd lol-slack
+$ npm install
+$ npm start
 ```
 
 This starts one `POST` route at [http://localhost:3000/lol](http://localhost:3000/lol). So to test it post a JSON object on the form of for example:
