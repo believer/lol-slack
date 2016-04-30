@@ -5,9 +5,13 @@ const fetch = require('../utils/fetch')
 const _ = require('lodash')
 const moment = require('moment')
 
-function prepUrl (url, region = 'eune', base = BASE, options) {
+function prepUrl (url, region, base, options) {
+  region = region || 'eune'
+  base = base || BASE
+  options = options || ''
+
   base = base.replace('{region}', region)
-  return `${base}${url}?api_key=${KEY}${options || ''}`
+  return `${base}${url}?api_key=${KEY}${options}`
 }
 
 function championById (summoner, id, region) {
@@ -105,11 +109,20 @@ function status (region) {
   return fetch(url)
 }
 
+function league (summoner, region) {
+  const url = prepUrl(`/v2.5/league/by-summoner/${summoner.id}/entry`, region)
+
+  return fetch(url)
+    .then(league => league[summoner.id][0])
+}
+
+
 module.exports = {
   championById: championById,
   championMasteryAll: championMasteryAll,
   champions: champions,
   gameBySummoner: gameBySummoner,
+  league: league,
   match: match,
   masteryScore: masteryScore,
   rankedMatches: rankedMatches,

@@ -15,6 +15,13 @@ $ npm install
 $ npm start
 ```
 
+Three environment variables need to be setup before starting.
+```
+LOL_GLOBAL=https://global.api.pvp.net/api/lol/static-data/{region}
+LOL_BASE=https://eune.api.pvp.net/api/lol/{region}
+RIOT_API_KEY=[YOUR-API-KEY]
+```
+
 This starts one `POST` route at [http://localhost:3000/lol](http://localhost:3000/lol). So to test it post a JSON object on the form of for example:
 
 ```
@@ -52,6 +59,13 @@ Display the help message only to the user who requested the help. (Also responds
 Displays statistics from a summoner's latest game.
 
 ![latest command](/assets/latest.png)
+
+#### `/lol league <summonerName> <region>`
+#### [TRY IT!](https://api.slack.com/docs/formatting/builder?msg=%7B%22mrkdwn%22:true,%22text%22:%22*League%20of%20Legends%20-%20Wins%20for%20believer%20(EUNE)*%22,%22attachments%22:%5B%7B%22title%22:%22Malphite's%20Sorcerers%22,%22fields%22:%5B%7B%22title%22:%22Division%22,%22value%22:%22GOLD%20IV%22,%22short%22:true%7D,%7B%22title%22:%22Wins%20/%20Losses%20(ratio)%22,%22value%22:%22157%20/%20145%20(51.99%25)%22,%22short%22:true%7D,%7B%22title%22:%22League%20points%22,%22value%22:48,%22short%22:true%7D,%7B%22title%22:%22Hot%20streak%22,%22value%22:%22No%22,%22short%22:true%7D,%7B%22title%22:%22Veteran%22,%22value%22:%22No%22,%22short%22:true%7D,%7B%22title%22:%22New%20in%20league%22,%22value%22:%22No%22,%22short%22:true%7D,%7B%22title%22:%22Inactive%22,%22value%22:%22No%22,%22short%22:true%7D%5D%7D%5D%7D)
+
+Displays division and stats for a summoner.
+
+![league command](/assets/league.png)
 
 #### `/lol masteryScore <summonerName> <region>`
 #### [TRY IT!](https://api.slack.com/docs/formatting/builder?msg=%7B%22mrkdwn%22:true,%22text%22:%22*League%20of%20Legends%20-%20Mastery%20score%20for%20believer%20is%20_184_%20(EUNE)*%22%7D)
