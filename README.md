@@ -65,7 +65,7 @@ Displays statistics from a summoner's latest game.
 
 Displays division and stats for a summoner.
 
-![league command](/assets/league.png)
+![league command](/assets/league.PNG)
 
 #### `/lol masteryScore <summonerName> <region>`
 #### [TRY IT!](https://api.slack.com/docs/formatting/builder?msg=%7B%22mrkdwn%22:true,%22text%22:%22*League%20of%20Legends%20-%20Mastery%20score%20for%20believer%20is%20_184_%20(EUNE)*%22%7D)
