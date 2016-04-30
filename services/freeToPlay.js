@@ -1,10 +1,10 @@
 const riot = require('./riot')
 const _ = require('highland')
 
-function freeToPlay (region) {
-  return _(riot.champions(region))
+function freeToPlay () {
+  return _(riot.champions(true))
     .flatMap(result => result.champions)
-    .map(champion => _(riot.championById(champion, champion.id, region)))
+    .map(champion => _(riot.championById(champion, champion.id)))
     .flatMap(champion => champion)
     .map(champion => ({
       title: champion.champion.name,

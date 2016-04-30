@@ -14,8 +14,8 @@ function prepUrl (url, region, base, options) {
   return `${base}${url}?api_key=${KEY}${options}`
 }
 
-function championById (summoner, id, region) {
-  const url = prepUrl(`/v1.2/champion/${id || summoner.match.championId}`, region, GLOBAL_BASE, '&champData=blurb,image')
+function championById (summoner, id) {
+  const url = prepUrl(`/v1.2/champion/${id || summoner.match.championId}`, null, GLOBAL_BASE, '&champData=blurb,image')
 
   return fetch(url)
     .then(data => Object.assign(summoner, { champion: data }))
@@ -70,8 +70,9 @@ function masteryScore (summoner, region, platform) {
   return fetch(url)
 }
 
-function champions (region) {
-  const url = prepUrl('/v1.2/champion', region, BASE, '&freeToPlay=true')
+function champions (freeToPlay) {
+  const options = freeToPlay ? '&freeToPlay=true' : null
+  const url = prepUrl('/v1.2/champion', null, BASE, options)
 
   return fetch(url)
 }
