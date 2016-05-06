@@ -1,6 +1,5 @@
 const BASE = process.env.LOL_BASE
 const GLOBAL_BASE = process.env.LOL_GLOBAL
-const KEY = process.env.RIOT_API_KEY
 const _ = require('lodash')
 const moment = require('moment')
 const fetch = require('../utils/fetch')

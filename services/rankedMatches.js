@@ -5,6 +5,10 @@ function rankedMatches (summonerName, region) {
   return _(riot.summonerByName(summonerName, region))
     .map(summoner => summoner[summonerName])
     .flatMap(summoner => _(riot.rankedMatches(summoner, region)))
+    .map(matches => {
+      if (!matches.matches) { return { matches: [] } }
+      return matches
+    })
     .flatMap(matches => matches.matches)
     .map(match => _(riot.championById(match, match.champion, region)))
     .flatMap(match => match)
